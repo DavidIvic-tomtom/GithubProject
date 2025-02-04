@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8B30FDBB2D4976850031228A /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B30FDBA2D4976850031228A /* FollowerListVC.swift */; };
+		8B4E11A02D52AE94000F8C7B /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E119F2D52AE94000F8C7B /* GFTitleLabel.swift */; };
+		8B4E11A22D52AFE6000F8C7B /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E11A12D52AFE6000F8C7B /* GFBodyLabel.swift */; };
+		8B4E11A42D52B0A0000F8C7B /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E11A32D52B0A0000F8C7B /* GFAlertVC.swift */; };
+		8B4E11A62D52B5F6000F8C7B /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E11A52D52B5F6000F8C7B /* UIViewController+Ext.swift */; };
 		8BD4A9A02D467B5D00797D88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD4A99F2D467B5D00797D88 /* AppDelegate.swift */; };
 		8BD4A9A22D467B5D00797D88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD4A9A12D467B5D00797D88 /* SceneDelegate.swift */; };
 		8BD4A9A92D467B5E00797D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD4A9A82D467B5E00797D88 /* Assets.xcassets */; };
@@ -20,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		8B30FDBA2D4976850031228A /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
+		8B4E119F2D52AE94000F8C7B /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
+		8B4E11A12D52AFE6000F8C7B /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
+		8B4E11A32D52B0A0000F8C7B /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
+		8B4E11A52D52B5F6000F8C7B /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		8BD4A99C2D467B5D00797D88 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD4A99F2D467B5D00797D88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD4A9A12D467B5D00797D88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,9 +77,13 @@
 				8BD4A99F2D467B5D00797D88 /* AppDelegate.swift */,
 				8B30FDBA2D4976850031228A /* FollowerListVC.swift */,
 				8BD4A9A12D467B5D00797D88 /* SceneDelegate.swift */,
+				8B4E119F2D52AE94000F8C7B /* GFTitleLabel.swift */,
+				8B4E11A12D52AFE6000F8C7B /* GFBodyLabel.swift */,
 				8BD4A9A82D467B5E00797D88 /* Assets.xcassets */,
 				8BD4A9AA2D467B5E00797D88 /* LaunchScreen.storyboard */,
 				8BD4A9AD2D467B5E00797D88 /* Info.plist */,
+				8B4E11A32D52B0A0000F8C7B /* GFAlertVC.swift */,
+				8B4E11A52D52B5F6000F8C7B /* UIViewController+Ext.swift */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -149,7 +161,11 @@
 				8BD4A9BA2D46921800797D88 /* GFTextField.swift in Sources */,
 				8BD4A9B62D46898000797D88 /* FavoritesListVC.swift in Sources */,
 				8BD4A9B82D468F7300797D88 /* GFButton.swift in Sources */,
+				8B4E11A62D52B5F6000F8C7B /* UIViewController+Ext.swift in Sources */,
 				8BD4A9B42D46894D00797D88 /* SearchVC.swift in Sources */,
+				8B4E11A42D52B0A0000F8C7B /* GFAlertVC.swift in Sources */,
+				8B4E11A22D52AFE6000F8C7B /* GFBodyLabel.swift in Sources */,
+				8B4E11A02D52AE94000F8C7B /* GFTitleLabel.swift in Sources */,
 				8B30FDBB2D4976850031228A /* FollowerListVC.swift in Sources */,
 				8BD4A9A02D467B5D00797D88 /* AppDelegate.swift in Sources */,
 				8BD4A9A22D467B5D00797D88 /* SceneDelegate.swift in Sources */,
