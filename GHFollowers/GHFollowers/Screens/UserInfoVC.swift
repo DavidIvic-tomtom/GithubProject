@@ -11,19 +11,26 @@ class UserInfoVC: UIViewController {
     
     var username: String!
     let headerView = UIView()
+    let itemViewOne = UIView()
+    let itemViewTwo = UIView()
+    var itemViews: [UIView] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutUI()
-        view.backgroundColor = .systemBackground
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
-        navigationItem.rightBarButtonItem = doneButton
+        configureViewController()
+        getUserInfo()
+    }
+    
+    func getUserInfo() {
         NetworkManager.shared.getUserInfo(for: username, completed: { [weak self] result in
             guard let self = self else {return}
             switch result {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.add(childVC: GFUserInfoVC(user: user), to: self.headerView)
+                    // self.add(childVC: GFUserInfoVC(user: user), to: self.itemViewOne)
+                    // self.add(childVC: GFUserInfoVC(user: user), to: self.itemViewTwo)
                 }
                 
             case .failure(let error):
@@ -33,15 +40,38 @@ class UserInfoVC: UIViewController {
     }
     
     func layoutUI() {
-        view.addSubview(headerView)
-        headerView.translatesAutoresizingMaskIntoConstraints = false
+        itemViews = [headerView, itemViewOne, itemViewTwo]
+        let padding = 20.0
+        
+        for itemView in itemViews {
+            view.addSubview(itemView)
+            itemView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                itemView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+                itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            ])
+        }
+        
+        itemViewOne.backgroundColor = .black
+        itemViewTwo.backgroundColor = .systemPink
+        
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 20)
+            headerView.heightAnchor.constraint(equalToConstant: 180),
+            
+            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
+            itemViewOne.heightAnchor.constraint(equalToConstant: 140),
+            
+            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
+            itemViewTwo.heightAnchor.constraint(equalToConstant: 140)
         ])
+    }
+    
+    func configureViewController() {
+        view.backgroundColor = .systemBackground
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
+        navigationItem.rightBarButtonItem = doneButton
     }
     
     func add(childVC: UIViewController, to containerView: UIView) {
