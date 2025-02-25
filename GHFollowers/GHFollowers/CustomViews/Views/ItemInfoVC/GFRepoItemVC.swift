@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFReportITtemVC: GFItemInfoVC {
+class GFReportItemVC: GFItemInfoVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureItems()
@@ -17,5 +17,9 @@ class GFReportITtemVC: GFItemInfoVC {
         itemInfoViewOne.set(itemInfoType: .repos, withCount: user.publicRepos)
         itemInfoViewTwo.set(itemInfoType: .gists, withCount: user.publicGists)
         actionButton.set(backgroundColor: .systemPurple, title: "Github profile")
+    }
+    
+    override func actionButtonTapped() {
+        delegate.didTapGitHubProfile(for: user)
     }
 }
