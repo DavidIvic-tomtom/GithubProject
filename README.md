@@ -1,2 +1,2 @@
 # SwiftPractice
-Practice swift
+Github pet project
